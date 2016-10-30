@@ -16,17 +16,21 @@
     "knex": "^0.12.6"
   },
   "devDependencies": {
+    "angular": "^1.5.8",
+    "angular-ui-router": "^0.3.1",
     "babel-cli": "^6.18.0",
     "babel-core": "^6.18.0",
     "babel-loader": "^6.2.7",
+    "babel-plugin-transform-es2015-modules-commonjs": "^6.18.0",
     "babel-preset-es2015": "^6.18.0",
     "babel-preset-latest": "^6.16.0",
     "del": "^2.2.2",
+    "extract-text-webpack-plugin": "^1.0.1",
     "gulp": "^3.9.1",
     "gulp-babel": "^6.1.2",
-    "html-webpack-plugin": "^2.24.0",
     "json-loader": "^0.5.4",
     "nodemon": "^1.11.0",
+    "raw-loader": "^0.5.1",
     "webpack": "^1.13.3"
   }
 }

@@ -1,9 +1,6 @@
-var HtmlWebpackPlugin = require('html-webpack-plugin');
-
-
 module.exports = {
   resolve: {
-    extensions: ["", ".webpack.js", ".web.js", ".js", '.es6', '.json']
+    extensions: ["", ".webpack.js", ".web.js", ".js", '.es6']
   },
   entry: {
     client: './src/client/run-client.es6'
@@ -18,8 +15,5 @@ module.exports = {
       exclude: /node_modules/,
       loader: 'babel-loader'
     }
-  ],
-  plugins: [
-      new HtmlWebpackPlugin()
   ]
 };
