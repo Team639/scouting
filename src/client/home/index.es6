@@ -1,6 +1,11 @@
-const homeController = require('./home.controller');
+const angular = require('angular');
+require('angular-ui-router');
+require('angular-resource')
 
-const homeModule = angular.module('app.home', ['ui.router'])
+const homeController = require('./home.controller');
+const homeService = require('./home.service');
+
+const homeModule = angular.module('app.home', ['ui.router', 'ngResource'])
   .config(['$stateProvider', ($stateProvider) => {
     $stateProvider.state('home', {
       url: '/home',
@@ -8,6 +13,8 @@ const homeModule = angular.module('app.home', ['ui.router'])
       template: require('raw!./home.html')
     });
   }])
-  .controller('HomeController', homeController).name;
+  .service('HomeService', homeService)
+  .controller('HomeController', homeController)
+  .name;
 
-module.exports = homeModule
+module.exports = homeModule;
