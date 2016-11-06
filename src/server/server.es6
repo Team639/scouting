@@ -1,12 +1,14 @@
 var express = require('express');
 var router = express.Router();
 
+var knex = require('./database-connection');
+
 router.get('/user', (req, res) => {
-  const userList = [
-    {id:1, name:'Joe'},
-    {id:2, name:'Stacy'}
-  ];
-  res.send({userList});
+  knex.select('*').from('users').then((userList) => {
+    res.send({userList});
+  }).catch((error) => {
+    res.send({error});
+  });
 });
 
 module.exports = router;
