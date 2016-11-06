@@ -1,6 +1,6 @@
 const angular = require('angular');
 require('angular-ui-router');
-require('angular-resource')
+require('angular-resource');
 
 const homeController = require('./home.controller');
 const homeService = require('./home.service');
